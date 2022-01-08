@@ -16,6 +16,14 @@ def webopen(url):
         ),
     )
     webbrowser.get("chrome").open(url)
+def full():
+    im = ImageGrab.grabclipboard()
+    im.save(f'{path}\\Pictures\\img.png','PNG')
+
+    pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tesseract'
+    query = (pytesseract.image_to_string(f"{path}\\Pictures\\img.png"))
+    url = "https://google.com/search?query=" + query
+    webopen(url)
 
 path = (os.path.expanduser('~'))
 
@@ -33,14 +41,6 @@ while True:
         if a < 0:
             pass
         else:
-            print("")
-            sleep(2)
-
-            im = ImageGrab.grabclipboard()
-            im.save(f'{path}\\Pictures\\img.png','PNG')
-
-            pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tesseract'
-            query = (pytesseract.image_to_string(f"{path}\\Pictures\\img.png"))
-            url = "https://google.com/search?query=" + query
-            webopen(url)
+            sleep(1)
+            full()
             break
