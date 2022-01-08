@@ -34,7 +34,7 @@ while True:
             pass
         else:
             print("")
-            sleep(1)
+            sleep(2)
 
             im = ImageGrab.grabclipboard()
             im.save(f'{path}\\Pictures\\img.png','PNG')
