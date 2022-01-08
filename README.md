@@ -1,4 +1,4 @@
-# drag-search
+# Drag-Search
 A python program to search text by taking a snip of the image
 
 Instructions:
