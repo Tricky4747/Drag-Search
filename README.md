@@ -1,5 +1,5 @@
 # drag-search
-A python program to search text from images in the clipboard.
+A python program to search text by taking a snip of the image
 
 Instructions:
 
